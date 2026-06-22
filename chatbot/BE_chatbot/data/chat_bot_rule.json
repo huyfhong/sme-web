@@ -1,0 +1,42 @@
+[
+    {
+        "keywords": ["chào", "xin chào"],
+        "response": "Xin chào! Tôi là trợ lý ảo Viettel. Tôi có thể hỗ trợ bạn về gói cước, tài khoản, tra cứu dịch vụ hoặc báo lỗi kỹ thuật. Bạn cần giúp gì?"
+    },
+    {
+        "keywords": ["sản phẩm", "giới thiệu", "dịch vụ", "giải pháp", "cung cấp"],
+        "response": "🛒 Danh sách sản phẩm/dịch vụ Viettel:\n1. Viettel CA - Chữ ký số: chứng thực chữ ký số điện tử\n2. SInvoice - Hóa đơn điện tử: quản lý hóa đơn điện tử\n3. Tendoo - Quản lý bán hàng: nền tảng quản lý bán hàng thông minh\n4. VContract - Hợp đồng điện tử: quản lý hợp đồng trực tuyến\n5. MySign - Ký số từ xa: ký số từ xa an toàn\n6. EasyHRM - Quản lý nhân sự: quản lý nhân sự toàn diện\n7. SContract - Hợp đồng điện tử cơ bản\n8. EasyBooks - Kế toán: phần mềm kế toán"
+    },
+    {
+        "keywords": ["gói cước", "data", "4g", "5g", "đăng ký", "dung lượng", "lưu lượng"],
+        "response": "📱 Gói cước 4G/5G Viettel phổ biến:\n- C70N: 70k/tháng — 1.5GB/ngày (45GB/tháng)\n- D120: 120k/tháng — 6GB/tháng + 6GB đêm\n- D300: 300k/tháng — 30GB/tháng + 30GB đêm\n- ST150K: 150k/tháng — 30GB/tháng + gọi miễn phí\n- ST300K: 300k/tháng — 60GB/tháng + gọi miễn phí\nĐăng ký qua app My Viettel hoặc gọi *098# để xem danh sách đầy đủ.\nKiểm tra lưu lượng còn lại: soạn KT DATA gửi 191.\nBạn muốn tìm gói phù hợp với nhu cầu?"
+    },
+    {
+        "keywords": ["tài khoản", "nạp thẻ", "số dư", "khuyến mãi", "ứng tiền"],
+        "response": "💰 Tài khoản & Nạp thẻ:\n- Số dư tài khoản chính: *101#\n- Tài khoản khuyến mãi: *102#\n- Lịch sử nạp thẻ: *103#\n- Ứng tiền: *911#\nBạn muốn kiểm tra thông tin nào?"
+    },
+    {
+        "keywords": ["điểm giao dịch", "cửa hàng", "viettel gần", "địa chỉ", "viettel++", "tích điểm"],
+        "response": "📍 Tra cứu dịch vụ:\n- Điểm giao dịch Viettel gần nhất: soạn DIEMGUI gửi 133\n- Thông tin tích điểm Viettel++: soạn VT PLUS gửi 199\nBạn cần tra cứu thông tin gì?"
+    },
+    {
+        "keywords": ["lỗi", "mất sóng", "mất mạng", "kết nối", "kỹ thuật", "internet", "truyền hình", "đường truyền"],
+        "response": "🔧 Hỗ trợ kỹ thuật:\n- Mất sóng/không vào mạng: tắt nguồn 30s rồi bật lại, nếu vẫn lỗi gọi 18008098\n- Lỗi internet cáp quang: kiểm tra đèn trên modem, nếu đèn PON nhấp nháy gọi 18008098\n- Hỗ trợ truyền hình: gọi 18008098\nBạn đang gặp sự cố gì?"
+    },
+    {
+        "keywords": ["my viettel", "ứng dụng", "app"],
+        "response": "📱 Hướng dẫn My Viettel:\n- Tải app My Viettel từ App Store/Google Play\n- Đăng nhập bằng số điện thoại chính chủ\n- Quản lý gói cước, nạp thẻ, tra cứu lưu lượng, thanh toán hoá đơn\nBạn cần hướng dẫn thao tác nào?"
+    },
+    {
+        "keywords": ["đăng ký chính chủ", "chính chủ", "cmnd", "cccd"],
+        "response": "📋 Đăng ký chính chủ:\n- Tất cả thuê bao di động phải đăng ký chính chủ theo quy định\n- Mang CMND/CCCD đến cửa hàng Viettel gần nhất\n- Kiểm tra thông tin thuê bao: *838#\nBạn cần hỗ trợ đăng ký chính chủ?"
+    },
+    {
+        "keywords": ["hỗ trợ", "tổng đài", "18008098", "liên hệ"],
+        "response": "📞 Tổng đài hỗ trợ Viettel:\n- Chăm sóc khách hàng: 18008098 (miễn phí)\n- Hỗ trợ kỹ thuật internet/truyền hình: 18008098\n- Đến cửa hàng Viettel gần nhất.\nBạn muốn kết nối với tổng đài nào?"
+    },
+    {
+        "keywords": ["tư vấn", "nhận tư vấn", "cần tư vấn", "đăng ký tư vấn", "hỗ trợ tư vấn"],
+        "response": "📋 Để được tư vấn chi tiết về sản phẩm/dịch vụ, vui lòng nhấn nút bên dưới để điền thông tin. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất.<br><br><button onclick=\"openConsultationModal()\" style=\"background:#e03;color:#fff;border:none;padding:10px 24px;border-radius:8px;cursor:pointer;font-size:14px;width:100%\">📝 Nhận tư vấn ngay</button>"
+    }
+]

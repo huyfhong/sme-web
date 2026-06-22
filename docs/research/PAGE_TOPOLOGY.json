@@ -1,0 +1,38 @@
+[
+  {
+    "index": 3,
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "textPreview": "Sản phẩm",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 80,
+      "top": 0,
+      "right": 1280,
+      "bottom": 80,
+      "left": 0
+    },
+    "interactionModel": "unknown"
+  },
+  {
+    "index": 4,
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "textPreview": "Cơ quan chủ quản: Tổng Công ty Viễn thông Viettel ",
+    "rect": {
+      "x": 0,
+      "y": 100,
+      "width": 1280,
+      "height": 534,
+      "top": 100,
+      "right": 1280,
+      "bottom": 634,
+      "left": 0
+    },
+    "interactionModel": "unknown"
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "fonts": [
+    "sans-serif",
+    "Roboto, Helvetica, Arial, sans-serif",
+    "\"FS PF BeauSans Pro\", serif",
+    "Roboto, serif",
+    "Sarabun, serif",
+    "\"FS PF BeauSans Pro\"",
+    "Sarabun",
+    "Roboto"
+  ],
+  "colors": [
+    "rgb(0, 0, 0)",
+    "rgba(0, 0, 0, 0.85)",
+    "rgb(238, 0, 51)",
+    "rgb(48, 48, 48)",
+    "rgb(120, 120, 120)",
+    "rgb(255, 255, 255)",
+    "rgb(40, 40, 40)",
+    "rgb(153, 153, 153)",
+    "rgb(115, 115, 115)"
+  ],
+  "bgColors": [
+    "rgba(0, 0, 0, 0)",
+    "rgb(245, 245, 245)",
+    "rgba(255, 255, 255, 0.59)",
+    "rgb(238, 0, 51)",
+    "rgb(242, 242, 242)",
+    "rgb(255, 255, 255)",
+    "rgb(247, 247, 247)",
+    "rgb(64, 64, 64)"
+  ],
+  "favicons": [
+    {
+      "href": "https://sme.viettel.vn/favicon.png",
+      "sizes": ""
+    }
+  ],
+  "meta": {
+    "title": "SME HUB",
+    "description": "SME Portal",
+    "ogImage": "https://viettel.vn/images/telecom.pn"
+  }
+}

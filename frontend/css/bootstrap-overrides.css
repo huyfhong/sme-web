@@ -1,0 +1,58 @@
+:root {
+  --bs-primary: #ef0032;
+  --bs-primary-rgb: 239, 0, 50;
+  --bs-danger: #ef0032;
+  --bs-danger-rgb: 239, 0, 50;
+  --bs-border-radius: 12px;
+  --bs-border-radius-sm: 8px;
+  --bs-body-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.btn {
+  --bs-btn-font-weight: 600;
+  --bs-btn-font-family: var(--font-viettel);
+  --bs-btn-border-radius: 12px 12px 12px 0;
+}
+.btn-sm {
+  --bs-btn-border-radius: 8px 8px 8px 0;
+}
+.btn-lg {
+  --bs-btn-border-radius: 12px 12px 12px 0;
+}
+.btn-outline-danger {
+  --bs-btn-color: var(--text-primary);
+  --bs-btn-border-color: var(--border-color);
+}
+.btn-outline-danger:hover {
+  --bs-btn-color: #ef0032;
+  --bs-btn-border-color: #ef0032;
+  --bs-btn-bg: transparent;
+}
+.card {
+  --bs-card-border-radius: 12px 12px 12px 0;
+  --bs-card-border-color: var(--border-color);
+}
+.badge {
+  font-weight: 600;
+}
+.pagination {
+  --bs-pagination-border-radius: 50%;
+  --bs-pagination-hover-color: #ef0032;
+  --bs-pagination-active-bg: #ef0032;
+  --bs-pagination-active-border-color: #ef0032;
+  --bs-pagination-focus-box-shadow: 0 0 0 0.2rem rgba(239,0,50,0.25);
+}
+.form-control,
+.form-select {
+  --bs-border-radius: 12px 12px 12px 0;
+  --bs-border-color: var(--border-color);
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: #ef0032;
+  box-shadow: 0 0 0 0.2rem rgba(239,0,50,0.15);
+}
+.form-label {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+}

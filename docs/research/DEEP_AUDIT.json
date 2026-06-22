@@ -1,0 +1,587 @@
+[
+  {
+    "tagName": "DIV",
+    "id": "root",
+    "className": "",
+    "height": 720,
+    "top": 0,
+    "textPreview": "Sản phẩm",
+    "imgCount": 84
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-jFlECs jKhjId",
+    "height": 5793.0625,
+    "top": 0,
+    "textPreview": "SME HUBLÀ GÌ ?",
+    "imgCount": 73
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-fxfMYa gnxvEB",
+    "height": 391.125,
+    "top": 921.59375,
+    "textPreview": "SME HUBLÀ GÌ ?",
+    "imgCount": 4
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "title",
+    "height": 102.28125,
+    "top": 921.59375,
+    "textPreview": "SME HUBLÀ GÌ ?",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 258.125,
+    "top": 1054.59375,
+    "textPreview": "SME Hub cung cấp hệ sinh thái hỗ trợ toàn diện từ tư vấn tới cung cấp các giải pháp chuyển đổi số tù",
+    "imgCount": 3
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "content list",
+    "height": 166.125,
+    "top": 1146.59375,
+    "textPreview": "SME Hub cung cấp hệ sinh thái hỗ trợ toàn diện từ tư vấn tới cung cấp các giải pháp chuyển đổi số tù",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-cVfrPL eJGZUR",
+    "height": 156.125,
+    "top": 1151.59375,
+    "textPreview": "SME Hub cung cấp hệ sinh thái hỗ trợ toàn diện từ tư vấn tới cung cấp các giải pháp chuyển đổi số tù",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-cVfrPL eJGZUR",
+    "height": 156.125,
+    "top": 1151.59375,
+    "textPreview": "SME Hub giúp doanh nghiệp tiết kiệm thời gian và chi phí trong vận hành",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-cVfrPL eJGZUR",
+    "height": 156.125,
+    "top": 1151.59375,
+    "textPreview": "Cam kết mang đến sự tin cậy và bảo mật cho mọi giao dịch và dữ liệu",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 829.6875,
+    "top": 1363.90625,
+    "textPreview": "DỊCH VỤ CHẤT LƯỢNG",
+    "imgCount": 22
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "slick-track",
+    "height": 648.5,
+    "top": 1437.09375,
+    "textPreview": "Sản phẩm thiết yếu",
+    "imgCount": 22
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-1ivooec-0 fNkFOl",
+    "height": 613.5,
+    "top": 1454.59375,
+    "textPreview": "Sản phẩm thiết yếu",
+    "imgCount": 7
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-1ivooec-0 fNkFOl",
+    "height": 613.5,
+    "top": 1454.59375,
+    "textPreview": "Sản phẩm nâng cao",
+    "imgCount": 10
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-1ivooec-0 fNkFOl",
+    "height": 613.5,
+    "top": 1454.59375,
+    "textPreview": "Sản phẩm đặc thù",
+    "imgCount": 5
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 608.265625,
+    "top": 2193.59375,
+    "textPreview": "VÌ SAO CHỌN SME HUB CỦA VIETTEL?",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "choose-viettel-mobile",
+    "height": 236.265625,
+    "top": 2193.59375,
+    "textPreview": "VÌ SAO CHỌN SME HUB CỦA VIETTEL?",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "content-desc",
+    "height": 114,
+    "top": 2301.46875,
+    "textPreview": "Chất lượng đảm bảo",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sub-description",
+    "height": 104,
+    "top": 2301.46875,
+    "textPreview": "Chất lượng đảm bảo",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sub-description",
+    "height": 104,
+    "top": 2301.46875,
+    "textPreview": "Thanh toán linh hoạt",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "ant-row",
+    "height": 521.421875,
+    "top": 3093.265625,
+    "textPreview": "1. Hỗ trợ các hoạt động nghiệp vụ",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "ant-col ant-col-12 p-n-r-1",
+    "height": 521.421875,
+    "top": 3093.265625,
+    "textPreview": "1. Hỗ trợ các hoạt động nghiệp vụ",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-kXdQBZ elxMci p-1",
+    "height": 423.0625,
+    "top": 3106.0625,
+    "textPreview": "1. Hỗ trợ các hoạt động nghiệp vụ",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 170.46875,
+    "top": 3118.859375,
+    "textPreview": "1. Hỗ trợ các hoạt động nghiệp vụ",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 154.93896484375,
+    "top": 3468.206298828125,
+    "textPreview": "15+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-bfvXlu gSTeAv",
+    "height": 539.59375,
+    "top": 3614.6875,
+    "textPreview": "GIẢI THƯỞNG ĐÃ ĐẠT ĐƯỢC",
+    "imgCount": 16
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "slick-track",
+    "height": 2604,
+    "top": 3688.15625,
+    "textPreview": "15+",
+    "imgCount": 19
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "slick-track",
+    "height": 464.59375,
+    "top": 3689.6875,
+    "textPreview": "Nhà cung cấp dịch vụ của năm tại các thị trường đang phát triển năm 2009 và Nhà cung cấp dịch vụ dat",
+    "imgCount": 16
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 164.05322265625,
+    "top": 3720.40625,
+    "textPreview": "2000+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 173.16748046875,
+    "top": 3982.05615234375,
+    "textPreview": "9+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-1b1ct74-0 jKMwnH slider-container",
+    "height": 628.28125,
+    "top": 4175.875,
+    "textPreview": "THỐNG KÊ VỀ CHÚNG TÔI",
+    "imgCount": 19
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "slick-slider slick-vertical slick-initialized",
+    "height": 558,
+    "top": 4246.15625,
+    "textPreview": "Previous",
+    "imgCount": 19
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 182.28125,
+    "top": 4253.15625,
+    "textPreview": "4.231+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 173.16748046875,
+    "top": 4354.05615234375,
+    "textPreview": "15+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 164.05322265625,
+    "top": 4464.40625,
+    "textPreview": "2000+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 154.939453125,
+    "top": 4584.2060546875,
+    "textPreview": "9+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 145.8251953125,
+    "top": 4713.4560546875,
+    "textPreview": "4.231+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-jcLxRB gOvbeJ",
+    "height": 594.671875,
+    "top": 4814.15625,
+    "textPreview": "ĐỐI TÁC NÓI GÌ VỀ CHÚNG TÔI",
+    "imgCount": 3
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-hoXZPR bOqaQH",
+    "height": 370.4375,
+    "top": 4853.171875,
+    "textPreview": "\"Đội ngũ bán hàng và CSKH của Viettel rất nhiệt tình, hỗ trợ 24/7. Khi sử dụng dịch vụ của Viettel c",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-jcLxRB gOvbeJ item",
+    "height": 370.4375,
+    "top": 4890.2158203125,
+    "textPreview": "“Phần mềm của Viettel rất dễ sử dụng và tiện lợi. Phần mềm hỗ trợ rất nhiều cho chúng tôi, giúp chún",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-hoXZPR bOqaQH",
+    "height": 291.4375,
+    "top": 4890.2158203125,
+    "textPreview": "“Phần mềm của Viettel rất dễ sử dụng và tiện lợi. Phần mềm hỗ trợ rất nhiều cho chúng tôi, giúp chún",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 154.939453125,
+    "top": 4956.2060546875,
+    "textPreview": "15+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "item-side",
+    "height": 370.4375,
+    "top": 5038.390625,
+    "textPreview": "\"Đội ngũ bán hàng và CSKH của Viettel rất nhiệt tình, hỗ trợ 24/7. Khi sử dụng dịch vụ của Viettel c",
+    "imgCount": 3
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-jcLxRB gOvbeJ item",
+    "height": 370.4375,
+    "top": 5112.47802734375,
+    "textPreview": "\"Các dịch vụ của Viettel Telecom rất tốt, chúng tôi rất tin tưởng khi sử dụng vì các dịch vụ đã hỗ t",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-hoXZPR bOqaQH",
+    "height": 314.4375,
+    "top": 5112.47802734375,
+    "textPreview": "\"Các dịch vụ của Viettel Telecom rất tốt, chúng tôi rất tin tưởng khi sử dụng vì các dịch vụ đã hỗ t",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 164.05322265625,
+    "top": 5208.40625,
+    "textPreview": "2000+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-evIOqL YpbNQ",
+    "height": 284.234375,
+    "top": 5408.828125,
+    "textPreview": "BẢN TINNỔI BẬT",
+    "imgCount": 9
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "slick-slider carousel slick-initialized",
+    "height": 231.4375,
+    "top": 5461.625,
+    "textPreview": "Viettel triển khai chương trình “Khai xuân ký số, mã đáo thành công” nhân dịp Tết Bính Ngọ",
+    "imgCount": 9
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "slick-track",
+    "height": 231.4375,
+    "top": 5461.625,
+    "textPreview": "Viettel triển khai chương trình “Khai xuân ký số, mã đáo thành công” nhân dịp Tết Bính Ngọ",
+    "imgCount": 9
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 173.16748046875,
+    "top": 5470.05615234375,
+    "textPreview": "9+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 182.28125,
+    "top": 5741.15625,
+    "textPreview": "4.231+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-g5tqmy-2 HLQpM",
+    "height": 534,
+    "top": 5793.0625,
+    "textPreview": "Cơ quan chủ quản: Tổng Công ty Viễn thông Viettel (Viettel Telecom) – Chi nhánh Tập đoàn Công nghiệp",
+    "imgCount": 8
+  },
+  {
+    "tagName": "DIV",
+    "id": "footer",
+    "className": "sc-ozfey8-0 cdOXyu",
+    "height": 489,
+    "top": 5793.0625,
+    "textPreview": "Cơ quan chủ quản: Tổng Công ty Viễn thông Viettel (Viettel Telecom) – Chi nhánh Tập đoàn Công nghiệp",
+    "imgCount": 6
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-ozfey8-2 jYOsPs",
+    "height": 429,
+    "top": 5823.0625,
+    "textPreview": "Cơ quan chủ quản: Tổng Công ty Viễn thông Viettel (Viettel Telecom) – Chi nhánh Tập đoàn Công nghiệp",
+    "imgCount": 6
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 349,
+    "top": 5823.0625,
+    "textPreview": "Cơ quan chủ quản: Tổng Công ty Viễn thông Viettel (Viettel Telecom) – Chi nhánh Tập đoàn Công nghiệp",
+    "imgCount": 2
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 173.16748046875,
+    "top": 5842.05615234375,
+    "textPreview": "15+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 104,
+    "top": 5853.0625,
+    "textPreview": "Cơ quan chủ quản: Tổng Công ty Viễn thông Viettel (Viettel Telecom) – Chi nhánh Tập đoàn Công nghiệp",
+    "imgCount": 2
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 164.05322265625,
+    "top": 5952.40625,
+    "textPreview": "2000+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "table",
+    "height": 169,
+    "top": 5973.0625,
+    "textPreview": "Khám phá",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "column",
+    "height": 169,
+    "top": 5973.0625,
+    "textPreview": "Theo dõi để nhận khuyến mại",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "sc-ozfey8-3 hmgoLJ",
+    "height": 139,
+    "top": 5973.0625,
+    "textPreview": "Theo dõi để nhận khuyến mại",
+    "imgCount": 0
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 154.939453125,
+    "top": 6072.2060546875,
+    "textPreview": "9+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 145.8251953125,
+    "top": 6201.4560546875,
+    "textPreview": "4.231+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 154.939453125,
+    "top": 6444.2060546875,
+    "textPreview": "15+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 164.05322265625,
+    "top": 6696.40625,
+    "textPreview": "2000+",
+    "imgCount": 1
+  },
+  {
+    "tagName": "DIV",
+    "id": "",
+    "className": "",
+    "height": 173.16748046875,
+    "top": 6958.05615234375,
+    "textPreview": "9+",
+    "imgCount": 1
+  }
+]
