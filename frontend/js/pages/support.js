@@ -1,6 +1,5 @@
-// ============================================
+
 // SUPPORT PAGE
-// ============================================
 
 function renderSupport() {
   const mainContent = document.getElementById('main-content');

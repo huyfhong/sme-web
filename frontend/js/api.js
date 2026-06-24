@@ -166,4 +166,24 @@ const api = {
   deletePackage(id) {
     return this.delete(`/admin/packages/${id}`);
   },
+
+  // --- Admin Staff ---
+  getStaff() {
+    return this.get('/staff');
+  },
+  getAdminStaff() {
+    return this.get('/admin/staff');
+  },
+  getAdminStaffById(id) {
+    return this.get(`/admin/staff/${id}`);
+  },
+  createAdminStaff(data) {
+    return this.post('/admin/staff', data);
+  },
+  updateAdminStaff(id, data) {
+    return this.put(`/admin/staff/${id}`, data);
+  },
+  deleteAdminStaff(id) {
+    return this.delete(`/admin/staff/${id}`);
+  },
 };

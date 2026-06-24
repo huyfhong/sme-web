@@ -27,9 +27,10 @@ function renderHeader() {
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="#/market-place" data-path="/market-place">Chợ ứng dụng</a></li>
-            <li class="nav-item"><a class="nav-link" href="" data-path="/goi-giai-phap">Gói giải pháp</a></li>
+            <li class="nav-item"><a class="nav-link" href="#/goi-giai-phap" data-path="/goi-giai-phap">Gói giải pháp</a></li>
             <li class="nav-item"><a class="nav-link" href="#/support" data-path="/support">Hỗ trợ</a></li>
             <li class="nav-item"><a class="nav-link" href="#/news" data-path="/news">Tin Tức</a></li>
+            <li class="nav-item"><a class="nav-link" href="#/team" data-path="/team">Giới thiệu nhân viên</a></li>
           </ul>
           <div class="d-flex align-items-center gap-2">
             <button class="header-bell" aria-label="Thông báo">
@@ -296,7 +297,8 @@ function showSuccessDialog() {
 document.getElementById('modal-overlay').addEventListener('click', closeModal);
 
 router.addRoute('/', (params) => renderHome());
-router.addRoute('/goi-giai-phap', (params) => renderHome());
+router.addRoute('/goi-giai-phap', (params) => renderSolution());
+router.addRoute('/goi-giai-phap/:id', (params) => renderSolutionDetail(parseInt(params.id)));
 router.addRoute('/market-place', (params) => renderMarketplace());
 router.addRoute('/product/:id', (params) => renderProductDetail(params.id));
 router.addRoute('/landing/:alias', (params) => renderLandingPage(params.alias));
@@ -305,6 +307,7 @@ router.addRoute('/news/:slug', (params) => renderNewsDetail(params.slug));
 router.addRoute('/login', (params) => renderLogin());
 router.addRoute('/register', (params) => renderRegister());
 router.addRoute('/support', (params) => renderSupport());
+router.addRoute('/team', (params) => renderTeam());
 router.addRoute('/admin', (params) => renderAdmin());
 
 renderHeader();

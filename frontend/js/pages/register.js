@@ -1,6 +1,5 @@
-// ============================================
+
 // REGISTER PAGE
-// ============================================
 
 function renderRegister() {
   const mainContent = document.getElementById('main-content');

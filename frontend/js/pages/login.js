@@ -1,6 +1,5 @@
-// ============================================
+
 // LOGIN PAGE
-// ============================================
 
 function renderLogin() {
   const mainContent = document.getElementById('main-content');

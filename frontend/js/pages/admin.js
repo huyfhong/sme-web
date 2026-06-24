@@ -34,6 +34,11 @@ function renderAdmin() {
               <i class="fas fa-box"></i> Sản phẩm
             </button>
           </li>
+          <li class="nav-item">
+            <button class="nav-link ${adminTab === 'staff' ? 'active' : ''}" data-tab="staff">
+              <i class="fas fa-users"></i> Nhân viên
+            </button>
+          </li>
         </ul>
 
         <div id="admin-content">
@@ -122,6 +127,21 @@ function renderAdminContent() {
     loadAdminConsultations(container);
   } else {
     loadAdminProducts(container);
+  }
+}
+
+function renderAdminContent() {
+  const container = document.getElementById('admin-content');
+  container.innerHTML = '<div class="text-center py-5"><div class="spinner-border text-danger" role="status"></div></div>';
+
+  if (adminTab === 'users') {
+    loadAdminUsers(container);
+  } else if (adminTab === 'consultations') {
+    loadAdminConsultations(container);
+  } else if (adminTab === 'products') {
+    loadAdminProducts(container);
+  } else if (adminTab === 'staff') {
+    loadAdminStaff(container);
   }
 }
 
@@ -678,5 +698,210 @@ async function handleDeletePackage(id) {
     showAdminSuccessDialog('Xoá gói thành công!', () => showProductDetailManager(managingProductId));
   } catch (err) {
     showToast(err.message || 'Lỗi khi xoá gói.', 'toast-error');
+  }
+}
+
+// ============================================
+// ADMIN — Staff Management
+// ============================================
+
+let editingStaffId = null;
+
+async function loadAdminStaff(container) {
+  try {
+    const res = await api.getAdminStaff();
+    const list = Array.isArray(res) ? res : [];
+
+    container.innerHTML = `
+      <div class="admin-table-wrap">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Tổng số: <strong>${list.length}</strong> nhân viên</span>
+          <button class="btn btn-danger btn-sm" onclick="showAddStaffForm()"><i class="fas fa-plus"></i> Thêm nhân viên</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-bordered admin-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Ảnh</th>
+                <th>Họ tên</th>
+                <th>Chức vụ</th>
+                <th>SĐT</th>
+                <th>Email</th>
+                <th>Thứ tự</th>
+                <th>Kích hoạt</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${list.length ? list.map((s, i) => `
+                <tr>
+                  <td>${i + 1}</td>
+                  <td>
+                    ${s.avatar
+                      ? `<img src="${s.avatar.startsWith('http') || s.avatar.startsWith('images/') ? s.avatar : 'images/' + s.avatar}" style="width:40px;height:40px;border-radius:50%;object-fit:cover">`
+                      : `<div style="width:40px;height:40px;border-radius:50%;background:#dc3545;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700">${s.name.charAt(0)}</div>`
+                    }
+                  </td>
+                  <td><strong>${escapeHtml(s.name)}</strong></td>
+                  <td>${escapeHtml(s.position || '—')}</td>
+                  <td>${escapeHtml(s.phone || '—')}</td>
+                  <td>${escapeHtml(s.email || '—')}</td>
+                  <td>${s.sort_order || 0}</td>
+                  <td>${s.is_active ? '<span class="badge bg-success">Hoạt động</span>' : '<span class="badge bg-secondary">Tắt</span>'}</td>
+                  <td>
+                    <div class="d-flex gap-1">
+                      <button class="btn btn-sm btn-outline-primary" onclick="showEditStaffForm(${s.id})"><i class="fas fa-edit"></i></button>
+                      <button class="btn btn-sm btn-outline-danger" onclick="handleDeleteStaff(${s.id})"><i class="fas fa-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              `).join('') : `
+                <tr><td colspan="9" class="text-center text-muted py-4">Chưa có nhân viên nào.</td></tr>
+              `}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    `;
+  } catch (err) {
+    container.innerHTML = '<div class="alert alert-danger">Không thể tải danh sách nhân viên.</div>';
+  }
+}
+
+async function showAddStaffForm() {
+  editingStaffId = null;
+  renderStaffForm(null);
+}
+
+async function showEditStaffForm(id) {
+  editingStaffId = id;
+  try {
+    const staff = await api.getAdminStaffById(id);
+    renderStaffForm(staff);
+  } catch (err) {
+    showToast('Không thể tải thông tin nhân viên.', 'toast-error');
+  }
+}
+
+function renderStaffForm(staff) {
+  const container = document.getElementById('admin-content');
+  const isEdit = !!staff;
+  const s = staff || {};
+
+  container.innerHTML = `
+    <div class="admin-table-wrap">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">${isEdit ? 'Sửa nhân viên' : 'Thêm nhân viên mới'}</h5>
+        <button class="btn btn-outline-secondary btn-sm" onclick="cancelStaffForm()"><i class="fas fa-arrow-left"></i> Quay lại</button>
+      </div>
+      <form id="staff-form" onsubmit="handleSaveStaff(event)">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Họ tên <span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="name" value="${escapeHtml(s.name || '')}" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Chức vụ</label>
+            <input type="text" class="form-control" name="position" value="${escapeHtml(s.position || '')}">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Số điện thoại</label>
+            <input type="text" class="form-control" name="phone" value="${escapeHtml(s.phone || '')}">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" value="${escapeHtml(s.email || '')}">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Thứ tự</label>
+            <input type="number" class="form-control" name="sort_order" value="${s.sort_order || 0}">
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Kích hoạt</label>
+            <select class="form-select" name="is_active">
+              <option value="1" ${s.is_active !== 0 ? 'selected' : ''}>Hoạt động</option>
+              <option value="0" ${s.is_active === 0 ? 'selected' : ''}>Tắt</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Ảnh đại diện</label>
+            <input type="file" class="form-control" accept="image/*" id="staff-avatar-file">
+            <input type="hidden" name="avatar" value="${escapeHtml(s.avatar || '')}">
+          </div>
+          <div class="col-12">
+            <div id="staff-avatar-preview" style="display:${s.avatar ? 'block' : 'none'};margin-top:8px">
+              <img src="${s.avatar ? (s.avatar.startsWith('http') || s.avatar.startsWith('images/') ? s.avatar : 'images/' + s.avatar) : ''}" style="max-width:100px;max-height:100px;border-radius:50%;object-fit:cover;border:2px solid #ddd">
+            </div>
+          </div>
+        </div>
+        <div class="mt-3">
+          <button type="submit" class="btn btn-danger">${isEdit ? 'Cập nhật' : 'Thêm mới'}</button>
+          <button type="button" class="btn btn-outline-secondary ms-2" onclick="cancelStaffForm()">Huỷ</button>
+        </div>
+      </form>
+    </div>
+  `;
+
+  document.getElementById('staff-avatar-file')?.addEventListener('change', handleStaffAvatarUpload);
+}
+
+function cancelStaffForm() {
+  editingStaffId = null;
+  loadAdminStaff(document.getElementById('admin-content'));
+}
+
+function handleStaffAvatarUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    document.querySelector('input[name="avatar"]').value = reader.result;
+    const preview = document.getElementById('staff-avatar-preview');
+    preview.style.display = 'block';
+    preview.innerHTML = `<img src="${reader.result}" style="max-width:100px;max-height:100px;border-radius:50%;object-fit:cover;border:2px solid #ddd">`;
+  };
+  reader.readAsDataURL(file);
+}
+
+async function handleSaveStaff(event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = {
+    name: form.name.value,
+    position: form.position.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    sort_order: parseInt(form.sort_order.value) || 0,
+    is_active: parseInt(form.is_active.value),
+    avatar: form.avatar.value,
+  };
+
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Đang lưu...';
+
+  try {
+    if (editingStaffId) {
+      await api.updateAdminStaff(editingStaffId, data);
+      showAdminSuccessDialog('Cập nhật nhân viên thành công!', () => { editingStaffId = null; renderAdminContent(); });
+    } else {
+      await api.createAdminStaff(data);
+      showAdminSuccessDialog('Thêm nhân viên thành công!', () => { editingStaffId = null; renderAdminContent(); });
+    }
+  } catch (err) {
+    showToast(err.message || 'Lỗi khi lưu nhân viên.', 'toast-error');
+    btn.disabled = false;
+    btn.textContent = editingStaffId ? 'Cập nhật' : 'Thêm mới';
+  }
+}
+
+async function handleDeleteStaff(id) {
+  if (!confirm('Bạn có chắc muốn xoá nhân viên này?')) return;
+  try {
+    await api.deleteAdminStaff(id);
+    showAdminSuccessDialog('Xoá nhân viên thành công!', renderAdminContent);
+  } catch (err) {
+    showToast(err.message || 'Lỗi khi xoá nhân viên.', 'toast-error');
   }
 }

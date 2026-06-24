@@ -26,6 +26,9 @@ if ($method === 'GET') {
         case $path === '/statistics':
             handleGetStatistics();
             break;
+        case $path === '/staff':
+            handleGetStaff();
+            break;
         case preg_match('#^/products/(\d+)$#', $path, $m) === 1:
             handleGetProductDetail((int)$m[1]);
             break;
@@ -47,6 +50,12 @@ if ($method === 'GET') {
             break;
         case $path === '/admin/products':
             handleGetAdminProducts($params);
+            break;
+        case preg_match('#^/admin/staff/(\d+)$#', $path, $m) === 1:
+            handleGetAdminStaff((int)$m[1]);
+            break;
+        case $path === '/admin/staff':
+            handleGetAdminStaff(null);
             break;
         default:
             jsonError('Not found', 404);
@@ -76,6 +85,9 @@ if ($method === 'GET') {
         case preg_match('#^/admin/products/(\d+)/packages$#', $path, $m) === 1:
             handleCreatePackage((int)$m[1], $input);
             break;
+        case $path === '/admin/staff':
+            handleCreateStaff($input);
+            break;
         default:
             jsonError('Not found', 404);
     }
@@ -90,6 +102,8 @@ if ($method === 'GET') {
         handleUpdateProductDetails((int)$m[1], $input);
     } elseif (preg_match('#^/admin/packages/(\d+)$#', $path, $m) === 1) {
         handleUpdatePackage((int)$m[1], $input);
+    } elseif (preg_match('#^/admin/staff/(\d+)$#', $path, $m) === 1) {
+        handleUpdateStaff((int)$m[1], $input);
     } else {
         jsonError('Not found', 404);
     }
@@ -103,6 +117,8 @@ if ($method === 'GET') {
         handleDeleteProduct((int)$m[1]);
     } elseif (preg_match('#^/admin/packages/(\d+)$#', $path, $m) === 1) {
         handleDeletePackage((int)$m[1]);
+    } elseif (preg_match('#^/admin/staff/(\d+)$#', $path, $m) === 1) {
+        handleDeleteStaff((int)$m[1]);
     } else {
         jsonError('Not found', 404);
     }
@@ -549,6 +565,89 @@ function handleDeletePackage($id) {
     $db = getDB();
     $id = (int)$id;
     $db->query("DELETE FROM product_packages WHERE id = $id");
+    jsonResponse(['success' => true]);
+}
+
+// ============================================
+// ADMIN — Staff CRUD
+// ============================================
+
+function handleGetStaff() {
+    $db = getDB();
+    $res = $db->query("SELECT id, name, position, phone, email, avatar, sort_order FROM staff WHERE is_active = 1 ORDER BY sort_order ASC");
+    $data = $res->fetch_all(MYSQLI_ASSOC);
+    jsonResponse($data);
+}
+
+function handleGetAdminStaff($id) {
+    requireAdmin();
+    $db = getDB();
+    if ($id) {
+        $id = (int)$id;
+        $res = $db->query("SELECT * FROM staff WHERE id = $id");
+        $staff = $res->fetch_assoc();
+        if (!$staff) jsonError('Not found', 404);
+        jsonResponse($staff);
+    } else {
+        $res = $db->query("SELECT * FROM staff ORDER BY sort_order ASC");
+        $data = $res->fetch_all(MYSQLI_ASSOC);
+        jsonResponse($data);
+    }
+}
+
+function handleCreateStaff($input) {
+    requireAdmin();
+    $db = getDB();
+    $name = $db->real_escape_string($input['name'] ?? '');
+    if (!$name) jsonError('Tên nhân viên là bắt buộc', 400);
+
+    $position = $db->real_escape_string($input['position'] ?? '');
+    $phone = $db->real_escape_string($input['phone'] ?? '');
+    $email = $db->real_escape_string($input['email'] ?? '');
+    $sort_order = (int)($input['sort_order'] ?? 0);
+
+    $avatar = '';
+    if (!empty($input['avatar'])) {
+        $avatar = saveBase64Image($input['avatar']);
+    }
+    $avatar = $db->real_escape_string($avatar);
+
+    $db->query("INSERT INTO staff (name, position, phone, email, avatar, sort_order)
+                VALUES ('$name', '$position', '$phone', '$email', '$avatar', $sort_order)");
+    jsonResponse(['success' => true, 'id' => $db->insert_id], 201);
+}
+
+function handleUpdateStaff($id, $input) {
+    requireAdmin();
+    $db = getDB();
+    $id = (int)$id;
+
+    $fields = [];
+    foreach (['name', 'position', 'phone', 'email'] as $f) {
+        if (isset($input[$f])) {
+            $v = $db->real_escape_string($input[$f]);
+            $fields[] = "$f = '$v'";
+        }
+    }
+    if (isset($input['sort_order'])) $fields[] = 'sort_order = ' . (int)$input['sort_order'];
+    if (isset($input['is_active'])) $fields[] = 'is_active = ' . ($input['is_active'] ? 1 : 0);
+
+    if (!empty($input['avatar'])) {
+        $avatar = saveBase64Image($input['avatar']);
+        $avatar = $db->real_escape_string($avatar);
+        $fields[] = "avatar = '$avatar'";
+    }
+
+    if (!$fields) jsonError('Không có dữ liệu cập nhật', 400);
+    $db->query("UPDATE staff SET " . implode(', ', $fields) . " WHERE id = $id");
+    jsonResponse(['success' => true]);
+}
+
+function handleDeleteStaff($id) {
+    requireAdmin();
+    $db = getDB();
+    $id = (int)$id;
+    $db->query("DELETE FROM staff WHERE id = $id");
     jsonResponse(['success' => true]);
 }
 

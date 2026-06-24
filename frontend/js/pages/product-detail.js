@@ -1,6 +1,5 @@
-// ============================================
+
 // PRODUCT DETAIL PAGE (API-based)
-// ============================================
 
 const fallbackProducts = [
   { id: 1, name: 'Viettel CA - Chữ ký số', short_description: 'Chứng thực chữ ký số điện tử', image: 'images/sinvoice.png', alias: 'CA' },
