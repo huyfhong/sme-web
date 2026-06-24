@@ -1,6 +1,4 @@
-/* ============================================
-   HOME PAGE - SECTION TITLES
-   ============================================ */
+/* HOME PAGE - SECTION TITLES */
 .section-title-split {
   font-family: var(--font-viettel);
   font-size: 32px;
@@ -23,9 +21,7 @@
   margin-bottom: 40px;
 }
 
-/* ============================================
-   HOME PAGE - PILL SEARCH
-   ============================================ */
+/*HOME PAGE - PILL SEARCH */
 .pill-search {
   display: flex;
   align-items: center;
@@ -77,9 +73,7 @@
   border-color: #888;
 }
 
-/* ============================================
-   HOME PAGE - CAROUSEL DOTS
-   ============================================ */
+/* HOME PAGE - CAROUSEL DOTS */
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -101,9 +95,7 @@
   border-radius: 4px;
 }
 
-/* ============================================
-   HOME PAGE - ICON CARDS (SME HUB là gì)
-   ============================================ */
+/* HOME PAGE - ICON CARDS (SME HUB là gì) */
 .icon-card {
   background: rgb(247, 247, 247);
   border-radius: 10px;
@@ -123,9 +115,7 @@
   color: rgba(0,0,0,0.85);
 }
 
-/* ============================================
-   HOME PAGE - SERVICES CARD
-   ============================================ */
+/* HOME PAGE - SERVICES CARD */
 .services-card {
   background: #fff;
   border-radius: 12px;
@@ -133,9 +123,7 @@
   box-shadow: 0 1px 8px rgba(0,0,0,0.06);
 }
 
-/* ============================================
-   HOME PAGE - PRODUCT CATEGORY CAROUSEL
-   ============================================ */
+/* HOME PAGE - PRODUCT CATEGORY CAROUSEL */
 .product-category-carousel {
   position: relative;
   max-width: 100%;
@@ -233,9 +221,7 @@
   flex-shrink: 0;
 }
 
-/* ============================================
-   HOME PAGE - VIEW MORE BUTTON
-   ============================================ */
+/* HOME PAGE - VIEW MORE BUTTON */
 .btn-view-more {
   display: inline-flex;
   align-items: center;
@@ -257,9 +243,7 @@
   color: #fff;
 }
 
-/* ============================================
-   HERO SECTION (Home)
-   ============================================ */
+/* HERO SECTION (Home) */
 .hero-section {
   position: relative;
   width: 100%;
@@ -318,9 +302,7 @@
   box-shadow: 0 0 6px rgba(255,255,255,0.6);
 }
 
-/* ============================================
-   WHY CHOOSE US (Home)
-   ============================================ */
+/* WHY CHOOSE US (Home) */
 .why-card {
   background: #fff;
   border-radius: 12px;
@@ -372,9 +354,7 @@
   display: block;
 }
 
-/* ============================================
-   STATISTICS (Home)
-   ============================================ */
+/* STATISTICS (Home) */
 .stats-section {
   position: relative;
   padding: 60px 0;
@@ -478,9 +458,7 @@
   color: var(--text-secondary);
 }
 
-/* ============================================
-   TESTIMONIALS (Home)
-   ============================================ */
+/* TESTIMONIALS (Home) */
 .testimonials-section {
   position: relative;
   padding: 60px 0;

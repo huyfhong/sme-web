@@ -1,6 +1,4 @@
-/* ============================================
-   CONSULTATION MODAL
-   ============================================ */
+/* CONSULTATION MODAL */
 .consultation-modal .modal-content {
   max-width: 520px;
 }
@@ -72,9 +70,7 @@
   background: var(--primary-dark);
 }
 
-/* ============================================
-   LOAD MORE / SHOW LESS
-   ============================================ */
+/* LOAD MORE / SHOW LESS */
 .load-more {
   text-align: center;
   margin-top: 30px;

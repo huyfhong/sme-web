@@ -1,6 +1,4 @@
-/* ============================================
-   HOME PAGE
-   ============================================ */
+/* HOME PAGE
 /* SME HUB là gì? */
 .sme-intro-section {
   padding: 60px 0;
@@ -56,9 +54,7 @@
   background: #fff;
 }
 
-/* ============================================
-   LANDING PAGE
-   ============================================ */
+/*LANDING PAGE */
 .landing-page {
   margin-top: var(--header-height);
 }
@@ -1199,9 +1195,7 @@
   }
 }
 
-/* ============================================
-   SOLUTION / GÓI GIẢI PHÁP
-   ============================================ */
+/*SOLUTION / GÓI GIẢI PHÁP */
 .solution-page {
   padding: calc(var(--header-height) + 20px) 0 60px;
   background: #f5f5f5;
@@ -1352,9 +1346,7 @@
   }
 }
 
-/* ============================================
-   TEAM / STAFF PAGE
-   ============================================ */
+/*TEAM / STAFF PAGE */
 .team-page {
   padding: calc(var(--header-height) + 20px) 0 60px;
   background: #f5f5f5;

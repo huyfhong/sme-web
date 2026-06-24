@@ -264,9 +264,8 @@ async function updateConsultationStatus(id, status) {
   }
 }
 
-// ============================================
 // ADMIN — Product Management
-// ============================================
+``
 
 let editingProductId = null;
 let managingProductId = null;
@@ -701,9 +700,7 @@ async function handleDeletePackage(id) {
   }
 }
 
-// ============================================
 // ADMIN — Staff Management
-// ============================================
 
 let editingStaffId = null;
 
