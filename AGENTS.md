@@ -69,9 +69,26 @@ Open http://localhost:8000/ in browser.
 - `frontend/js/pages/team.js`: Staff card renderer
 - `frontend/images/staff/`: 12 staff avatar images
 
-## Done
+## Session (Jun 25)
 
-### Project Restructuring (This Session)
+### Staff Page UI Polish
+- Avatar display changed from `<img>` to `background-image` with `background-position: center` for perfect centering
+- Avatar size: 80px → 140px → 150px → **170px** (desktop)
+- Grid columns: 4 → 3 → 2 → back to **3 columns** (max-width **1400px**)
+- Border: removed red → replaced with **4px solid #ddd** (light gray)
+- Font sizes increased: name **20px bold**, position **16px**, info **15px**
+- Card border-radius: 12px → **16px**, shadow increased
+- Responsive breakpoints: tablet 992px → 2 cột, mobile 768px → 2 cột, 480px → 1 cột
+- Admin table avatar preview uses 40px round with fallback initial letter
+
+### CORS Fix
+- Added OPTIONS handler at top of `router.php` — PHP built-in server doesn't pass OPTIONS requests to router by default, causing CORS preflight to fail
+- `router.php`: first check `$_SERVER['REQUEST_METHOD'] === 'OPTIONS'` → return 200 with `Access-Control-Allow-Origin: *`
+
+### Nav Overlap Fix
+- `.team-page` and `.solution-page` padding changed from `60px 0` to `calc(var(--header-height) + 20px) 0 60px` to prevent titles from being hidden behind fixed nav (header height: 72px desktop / 60px mobile)
+
+### Project Restructuring (Previous Session)
 - `api/` → `backend/api/`
 - `css/`, `js/`, `images/` → `frontend/`
 - `index.html` → root (moved from `frontend/`)
