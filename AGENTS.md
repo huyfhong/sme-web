@@ -88,6 +88,16 @@ Open http://localhost:8000/ in browser.
 ### Nav Overlap Fix
 - `.team-page` and `.solution-page` padding changed from `60px 0` to `calc(var(--header-height) + 20px) 0 60px` to prevent titles from being hidden behind fixed nav (header height: 72px desktop / 60px mobile)
 
+### Product Dropdown in Consultation Form (Jun 29)
+- `main.js`: Changed `openConsultationModal()` from hardcoded product list to async fetch via `api.getProducts({ limit: 100 })`
+- Now shows real products from database instead of hardcoded list
+- "Khác" always appended as last option; fallback to `['Khác']` if API fails
+
+### Product Name Overflow in Services Slider (Jun 29)
+- `home.css`: Added `min-width: 0`, `width: 100%` to `.pcs-product` and `.pcs-product-info`
+- Changed `.pcs-product-info strong` from `white-space: nowrap` to `display: -webkit-box` (2-line clamp) + `word-break: break-word`
+- Fixes long product names pushing into adjacent slides
+
 ### Project Restructuring (Previous Session)
 - `api/` → `backend/api/`
 - `css/`, `js/`, `images/` → `frontend/`

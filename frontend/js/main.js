@@ -20,10 +20,10 @@ function renderHeader() {
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" role="button">Sản phẩm</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#/product/1" data-path="/product/1">Chữ ký số Viettel CA</a></li>
-                <li><a class="dropdown-item" href="#/product/2" data-path="/product/2">Hóa đơn điện tử vInvoice</a></li>
-                <li><a class="dropdown-item" href="#/product/3" data-path="/product/3">Tendoo - Quản lý bán hàng</a></li>
-                <li><a class="dropdown-item" href="#/product/4" data-path="/product/4">VContract - Hợp đồng điện tử</a></li>
+                <li><a class="dropdown-item" href="#/product/2" data-path="/product/1">Chữ ký số từ xa MySign</a></li>
+                <li><a class="dropdown-item" href="#/product/1" data-path="/product/2">Hóa đơn điện tử SInvoice</a></li>
+                <li><a class="dropdown-item" href="#/product/10" data-path="/product/3">Tendoo - Quản lý bán hàng</a></li>
+                <li><a class="dropdown-item" href="#/product/3" data-path="/product/4">VContract - Hợp đồng điện tử</a></li>
               </ul>
             </li>
             <li class="nav-item"><a class="nav-link" href="#/market-place" data-path="/market-place">Chợ ứng dụng</a></li>
@@ -158,23 +158,21 @@ function updateActiveNav() {
   });
 }
 
-function openConsultationModal(productName) {
+async function openConsultationModal(productName) {
   const overlay = document.getElementById('modal-overlay');
   const container = document.getElementById('modal-container');
   const content = document.getElementById('modal-content');
 
   container.className = 'modal-container consultation-modal';
 
-  const products = [
-    'Chữ ký số Viettel CA',
-    'Hóa đơn điện tử vInvoice',
-    'Tendoo - Quản lý bán hàng',
-    'VContract - Hợp đồng điện tử',
-    'Cloud Server',
-    'vBHXH - Bảo hiểm xã hội',
-    'SINVOICE',
-    'Khác',
-  ];
+  let products = ['Khác'];
+  try {
+    const res = await api.getProducts({ limit: 100 });
+    if (res.data && res.data.length) {
+      products = res.data.map(p => p.name);
+      if (!products.includes('Khác')) products.push('Khác');
+    }
+  } catch (err) {}
 
   content.innerHTML = `
     <span class="modal-close" onclick="closeModal()">&times;</span>
