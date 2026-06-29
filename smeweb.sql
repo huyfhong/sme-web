@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 22, 2026 lúc 05:34 AM
+-- Thời gian đã tạo: Th6 29, 2026 lúc 04:28 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.0.30
 
@@ -41,7 +41,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `token`, `created_at`) VALUES
-(2, 'Admin', 'admin@sme.vn', '$2y$10$dRQS1YNVPqS4DU0jB3BFeeZURJyp4fkkVXv9m67D1ecnG3cVBURAi', '568e127461e64f721a39279ec5ced603ddf12b19b6fa0f96e5de00f86ec4eafc', '2026-06-21 17:06:54');
+(2, 'Admin', 'admin@sme.vn', '$2y$10$dRQS1YNVPqS4DU0jB3BFeeZURJyp4fkkVXv9m67D1ecnG3cVBURAi', '3c9eaa768f6524767e85fc5984d9da47205a7be6be30eb95b3fd065a9a557cb0', '2026-06-21 17:06:54');
 
 -- --------------------------------------------------------
 
@@ -118,7 +118,11 @@ INSERT INTO `consultations` (`id`, `name`, `phone`, `email`, `product`, `message
 (2, 'Huy Phong', '0374573648', 'phonghuy2004@gmail.com', 'Hóa đơn điện tử vInvoice', 'test 112\n', 'pending', '2026-06-22 02:03:23'),
 (3, 'Huy Phong', '0374573648', 'phonghuy2004@gmail.com', 'vBHXH - Bảo hiểm xã hội', 'msms', 'pending', '2026-06-22 02:16:09'),
 (4, 'tsdsfs', 'sffsf', 'phonghuy2004@gmail.com', 'Chữ ký số Viettel CA', 'ssf', 'pending', '2026-06-22 02:45:32'),
-(5, 'Huy Phong', '0374573648', 'phonghuy2004@gmail.com', 'Chữ ký số Viettel CA', 'sfsfs', 'pending', '2026-06-22 02:48:09');
+(5, 'Huy Phong', '0374573648', 'phonghuy2004@gmail.com', 'Chữ ký số Viettel CA', 'sfsfs', 'pending', '2026-06-22 02:48:09'),
+(6, 'Huy Phong', '0374573648', 'phonghuy2004@gmail.com', 'vBHXH - Bảo hiểm xã hội', 'sdsd', 'pending', '2026-06-22 04:01:33'),
+(7, 'sdsdsd', '0374573648', 'phonghuy2004@gmail.com', 'SINVOICE', 'sfs\n', 'pending', '2026-06-22 04:11:12'),
+(8, 'Huy Phong', '0374573648', 'phonghuy2004@gmail.com', 'Tendoo - Quản lý bán hàng', 'tu van 123\n', 'pending', '2026-06-28 16:58:39'),
+(9, 'Huy Phong', '0374573648', 'phonghuy2004@gmail.com', 'cr7', 'SIUU', 'contacted', '2026-06-28 17:04:19');
 
 -- --------------------------------------------------------
 
@@ -220,7 +224,7 @@ INSERT INTO `product_details` (`id`, `product_id`, `slogan`, `overview`, `featur
 (10, 10, 'Thông minh - Hiệu quả - Tiện lợi', 'Tendoo là dịch vụ được đánh giá là một giải pháp quản lý bán hàng phù hợp với nhiều loại hình kinh doanh tại Việt Nam, từ cửa hàng nhỏ lẻ đến các chuỗi cửa hàng. Dịch vụ này được thiết kế để đáp ứng nhu cầu quản lý bán hàng đa dạng của các cửa hàng và doanh nghiệp thuộc nhiều lĩnh vực khác nhau.\r\n\r\nDịch vụ Tendoo ra đời đã mang lại nhiều lợi ích cho doanh nghiệp như:\r\n\r\n- Tiết kiệm thời gian và chi phí: Quản lý tập trung mọi hoạt động bán hàng trên một nền tảng duy nhất, giảm thiểu việc sử dụng nhiều công cụ khác nhau.\r\n\r\n- Tăng hiệu quả quản lý: Dễ dàng theo dõi và kiểm soát tình hình kinh doanh, quản lý kho hàng chính xác, tránh thất thoát.\r\n\r\n- Nắm bắt dữ liệu kinh doanh: Các báo cáo chi tiết giúp đưa ra quyết định kinh doanh nhanh chóng và chính xác hơn.\r\n\r\n- Nâng cao trải nghiệm khách hàng: Phản hồi nhanh chóng, quản lý đơn hàng chuyên nghiệp, cung cấp nhiều phương thức thanh toán tiện lợi.\r\n\r\n- Mở rộng kênh bán hàng: Dễ dàng tiếp cận và quản lý khách hàng trên nhiều nền tảng trực tuyến.', '1. Mở rộng đa kênh\r\n\r\n- Bán hàng online: Tạo website, catalog bán hàng chuyên nghiệp chỉ trong 2 phút trên di động.\r\n\r\n- Kết nối sàn TMĐT: Cập nhật tồn kho, giá bán trên Shopee, TiktokShop, Lazada và xuất hoá đơn tự động.\r\n\r\n- Kết nối Facebook, Zalo OA: Thuận tiện chăm sóc khách hàng và tăng nhận diện thương hiệu.\r\n\r\n- Tích hợp đa kênh: Đồng bộ thông tin và đơn hàng từ tất cả các kênh trên một nền tảng duy nhất.\r\n    \r\n    Quản lý lãi lỗ - công nợ\r\n\r\n- Nắm rõ doanh thu, chi phí bán hàng: Tạo website, catalog bán hàng chuyên nghiệp chỉ trong 2 phút trên di động\r\n\r\n- Trợ lý AI phân tích lãi lỗ thông minh: Theo dõi hiệu quả, chính xác, giúp tối ưu quản lý tài chính\r\n\r\n- Thu hồi công nợ: Theo dõi và tự động gửi nhắc nợ đến khách hàng, thu tiền về nhanh chóng\r\n\r\n- Đối soát tự động: Tích hợp đối soát với tài khoản cá nhân không cần tải sao kê ngân hàng\r\n\r\n- Thông báo tiền về qua loa tiện lợi: Kết nối dễ dàng, biết trạng thái thanh toán mà không cần kiểm tra điện thoại\r\n\r\nVà nhiều tính năng khác hỗ trợ doanh nghiệp như:\r\n\r\n- Tích điểm khách hàng: Giúp giữ chân khách hàng, tăng trưởng doanh thu\r\n\r\n- Kết nối thiết bị: Hỗ trợ in hoá đơn, quét mã, in tem món, in bếp\r\n\r\n- Quản lý ca: Điều phối nhân viên, kiểm tra hiệu suất ca làm\r\n\r\n- In tem mã vạch: Quản lý hàng hóa chính xác, tránh thất thoát\r\n\r\n- Đặt bàn: Tăng doanh thu giờ cao điểm, tránh lãng phí chỗ\r\n\r\n- Khuyến mãi: Thu hút khách hàng mới, kích thích chi tiêu\r\n\r\n- Quản lý kho: Giảm tồn kho dư thừa, tiết kiệm chi phí lưu kho\r\n\r\nCông nợ: Nhắc nợ tự động, thu hồi nhanh, tránh thất thoát', NULL, '2026-06-14 08:08:36'),
 (11, 11, 'Quảng cáo và chăm sóc khách hàng đa kênh', 'Tendoo Marketing là nền tảng marketing số đa kênh cung cấp giải pháp quảng cáo và chăm sóc khách hàng toàn diện cho hộ kinh doanh và doanh nghiệp. Nền tảng cho phép người dùng tạo, quản lý và đo lường hiệu quả chiến dịch truyền thông trên một hệ thống tập trung, hỗ trợ triển khai qua nhiều kênh như SMS, ZNS, Email và các kênh số khác.\r\n\r\nTendoo Marketing mang lại các giá trị chính:\r\n\r\n● Dễ dàng triển khai và quản lý chiến đa kênh trên một nền tảng mà không cần đội ngũ kỹ thuật chuyên sâu.\r\n\r\n● Khai thác tập khách hàng Viettel tiếp cận khách hàng tiềm năng chính xác.\r\n\r\n● Tự động hóa hoạt động truyền thông và chăm sóc khách hàng theo kịch bản.\r\n\r\n● Đo lường hiệu quả chiến dịch dựa trên dữ liệu toàn trình.\r\n\r\nVới định hướng trở thành nền tảng marketing và chăm sóc khách hàng toàn diện, Tendoo Marketing giúp doanh nghiệp nâng cao hiệu quả truyền thông và mở rộng khả năng tăng trưởng trong kỷ nguyên kinh doanh số.', 'Quản lý chiến dịch Marketing & CSKH đa kênh\r\n\r\nTạo, triển khai và theo dõi chiến dịch truyền thông, chăm sóc khách hàng trên một nền tảng duy nhất, lựa chọn kênh, nội dung và thời điểm gửi linh hoạt.\r\n\r\nTiếp cận khách hàng tiềm năng chính xác\r\n\r\nKhai thác tệp khách hàng Viettel theo các tiêu chí phù hợp, kết hợp triển khai đa kênh để tiếp cận đúng đối tượng và tối ưu hiệu quả cho từng chiến dịch quảng bá.\r\n\r\nTự động hóa Marketing & CSKH\r\n\r\nThiết lập kịch bản gửi thông báo, nhắc lịch, chăm sóc định kỳ, quảng bá sản phẩm hoặc khuyến mãi tự động theo hành vi và thời điểm phù hợp.\r\n\r\nBáo cáo và đo lường hiệu quả\r\n\r\nCung cấp dữ liệu về trạng thái gửi, chi phí và hiệu quả tương tác, hỗ trợ tối ưu hoạt động truyền thông.', NULL, '2026-06-14 08:08:36'),
 (12, 12, 'Ký kết tiện lợi và Số hóa quy trình nội bộ', 'SẢN PHẨM sCONTRACT LÀ GÌ?\r\n\r\nHợp đồng điện tử Viettel (sContract) cho phép doanh nghiệp quản lý và ký số các loại hợp đồng, tài liệu với khách hàng, đối tác qua internet. Hợp đồng điện tử Viettel đáp ứng các quy định của pháp luật và là giải pháp thay thế hợp đồng giấy hiệu quả, có giá trị pháp lý như việc ký kết hợp đồng giấy theo phương thức truyền thống.\r\n\r\n\r\n\r\nƯU ĐIỂM VƯỢT TRỘI\r\n\r\n· Miễn phí data với thuê bao Viettel khi truy cập ứng dụng trên di động.\r\n\r\n· Đa dạng hình thức ký kết: chữ ký số USB Token, MySign, OTP.\r\n\r\n· Quy trình tạo lập, ký kết đơn giản, nhanh chóng.\r\n\r\n· Kho hợp đồng mẫu đa dạng, miễn phí.\r\n\r\n· Sẵn sàng tích hợp với các phần mềm lớn.\r\n\r\n· Ưu đãi SMS Brandname và eKYC giá tốt nhất thị trường.', '1. TÍNH NĂNG CƠ BẢN\r\n\r\nKhởi tạo và ký hợp đồng\r\n\r\n• Khởi tạo hợp đồng đơn lẻ/ theo lô thuận tiện nhanh chóng\r\n\r\n• Thiết lập luồng ký linh hoạt: ký tuần tự, song song…\r\n\r\n• Ký kết hợp đồng với đa dạng phương thức ký ( ký số/OTP/eKYC+OTP)\r\n\r\n• Dễ dàng theo dõi tiến trình ký kết hợp đồng qua email/SMS\r\n\r\nQuản lý và lưu trữ hợp đồng\r\n\r\n• Dễ dàng quản lý hợp đồng theo tiến trình ký kết\r\n\r\n• Đa dạng báo cáo các loại hợp đồng\r\n\r\n• Tổ chức sắp xếp, lưu trữ, phân loại hợp đồng cho phép tra cứu dễ dàng\r\n\r\n\r\n2. QUY TRÌNH LẬP VÀ KÝ HỢP ĐỒNG\r\n\r\nNgười Lập Hợp đồng\r\n\r\n· Upload file hợp đồng/chọn hợp đồng từ mẫu.\r\n\r\n· Thiết lập các bên tham gia và thứ tự phê duyệt, ký kết.\r\n\r\n· Trình ký  hợp đồng.\r\n\r\nNgười Phê Duyệt\r\n\r\n· Hệ thống gửi thông báo hợp đồng cần phê duyệt đến người phê duyệt qua email/SMS.\r\n\r\n· Duyệt trước nội dung.\r\n\r\nNgười Ký\r\n\r\n· Hệ thống gửi thông báo hợp đồng cần ký đến người ký qua email/SMS.\r\n\r\n· Thực hiện ký bằng OTP hoặc Chữ ký số.\r\n\r\nHoàn Thành Hợp đồng\r\n\r\n· Hệ thống gửi thông báo hợp đồng hoàn thành cho các bên.\r\n\r\n· Hợp đồng được mã hóa và lưu trữ.', NULL, '2026-06-14 08:08:36'),
-(14, 14, '10h kém 7 ', 'si lùn', '', '', '2026-06-22 03:13:06');
+(14, 14, '10h kém 7 ', '5-0 uzb', '', '', '2026-06-22 03:13:06');
 
 -- --------------------------------------------------------
 
@@ -298,6 +302,42 @@ INSERT INTO `product_packages` (`id`, `product_id`, `package_name`, `quantity`, 
 (53, 12, 'sContract gói 500 hợp đồng', 1000, '12 tháng', 0.00, 2754000.00, '2026-06-14 08:39:55'),
 (54, 12, 'sContract gói 100 hợp đồng', 1000, '12 tháng', 0.00, 594000.00, '2026-06-14 08:39:55'),
 (55, 12, 'sCotract gói hợp đồng dùng thử', 1000, '12 tháng', 0.00, 0.00, '2026-06-14 08:39:55');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `staff`
+--
+
+CREATE TABLE `staff` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `position` varchar(100) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `avatar` varchar(255) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT 0,
+  `is_active` tinyint(1) DEFAULT 1,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `staff`
+--
+
+INSERT INTO `staff` (`id`, `name`, `position`, `phone`, `email`, `avatar`, `sort_order`, `is_active`, `created_at`) VALUES
+(1, 'Trương Công Vĩnh', 'Phó Giám Đốc KHDN', '0983 5083 06', 'vinhtc@viettel.com.vn', '1782277030_71a13308.png', 1, 1, '2026-06-24 04:25:57'),
+(2, 'Võ Hoàng Anh', ' Trưởng phòng Dự án KHDN', '0985 3579 11', 'anhvh5@viettel.com.vn', '1782328411_01e805be.png', 2, 1, '2026-06-24 04:25:57'),
+(3, 'Vương Lê Quốc Vương', 'Giám sát điều hành kênh SME', '0387 3316 68', 'vuongvlq@viettelpost.com.vn', '1782329684_a50d2cf3.png', 3, 1, '2026-06-24 04:25:57'),
+(4, 'LÊ THỊ NGỌC HOA', 'Giám sát điều hành kênh SME', '0981 0707 75', 'hoaltn@viettelpost.com.vn', '1782329634_87d0cd1d.png', 4, 1, '2026-06-24 04:25:57'),
+(5, 'NGUYỄN THỊ Y PHỤNG', 'Chuyên viên Dự án KHDN', '0971 3999 73', 'phungnty@viettel.com.vn', '1782329697_befba8a7.png', 5, 1, '2026-06-24 04:25:57'),
+(6, 'Nguyễn Nhật Trường', 'Chuyên viên Dự án KHDN', '0987 7377 47', 'truongnn@viettel.com.vn', '1782330085_bc899609.png', 6, 1, '2026-06-24 04:25:57'),
+(7, 'Ngô Văn Út', 'Chuyên viên Dự án KHDN', '0333 1922 88', 'utnv4@viettel.com.vn', '1782665250_b6bd50ea.png', 7, 1, '2026-06-24 04:25:57'),
+(8, 'Tạ Minh Tâm', 'Chuyên viên Dự án KHDN', '0336 7777 79', 'tamtm2@viettel.com.vn', '1782665348_ace2d406.png', 8, 1, '2026-06-24 04:25:57'),
+(9, 'Nguyễn Thành Nhân', 'Chuyên viên Dự án KHDN', '0332 4060 49', 'nhannt382@viettel.com.vn', '1782665450_c0575adf.png', 9, 1, '2026-06-24 04:25:57'),
+(10, 'Trần Vân Anh', 'Chuyên viên Dự án KHDN', '0364 4999 88', 'anhtv90@viettel.com.vn', '1782665580_3f813061.png', 10, 1, '2026-06-24 04:25:57'),
+(11, 'Võ Thị Cẩm Thùy', 'Chuyên viên Dự án KHDN', '0865 0994 49', 'vothicamthuy0803@gmail.com', '1782665699_bce14a6e.png', 11, 1, '2026-06-24 04:25:57'),
+(12, 'Trần Duy Bảo Anh', 'Chuyên viên Dự án KHDN', '0985 0365 65', 'baoanhvn.2003@gmail.com', '1782665778_efd600cc.png', 12, 1, '2026-06-24 04:25:57');
 
 -- --------------------------------------------------------
 
@@ -430,6 +470,12 @@ ALTER TABLE `product_packages`
   ADD KEY `product_id` (`product_id`);
 
 --
+-- Chỉ mục cho bảng `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `statistics`
 --
 ALTER TABLE `statistics`
@@ -474,7 +520,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT cho bảng `consultations`
 --
 ALTER TABLE `consultations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `partners`
@@ -501,6 +547,12 @@ ALTER TABLE `product_packages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
+-- AUTO_INCREMENT cho bảng `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
 -- AUTO_INCREMENT cho bảng `statistics`
 --
 ALTER TABLE `statistics`
@@ -518,29 +570,7 @@ ALTER TABLE `testimonials`
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
--- --------------------------------------------------------
-
 --
--- Cấu trúc bảng cho bảng `staff`
---
-
-CREATE TABLE `staff` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL,
-  `position` varchar(100) DEFAULT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
-  `avatar` varchar(255) DEFAULT NULL,
-  `sort_order` int(11) DEFAULT 0,
-  `is_active` tinyint(1) DEFAULT 1,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-ALTER TABLE `staff`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;-- 
 -- Các ràng buộc cho các bảng đã đổ
 --
 
